@@ -1,0 +1,325 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginSignIn</title>
+    <script src="https://kit.fontawesome.com/131e0ec2d1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        *{
+            padding : 0;
+            margin : 0;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background : white;
+        }
+
+        .login-container {
+            background: white;
+            width: 280px;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow : 0px 2px 5px 0px black;
+        }
+
+        .login-container h1
+        {
+            text-align : center;
+            position : relative;
+            top : 30px;
+        }
+
+        .input-container
+        {
+            display : flex;
+            flex-direction : column;
+            justify-content : center;
+            align-items : center;
+        }
+
+        /* User Name */
+        .input-username
+        {
+            position : relative;
+        }
+        .username-error
+        {
+            position : absolute;
+            font-size : 10px;
+            bottom : -7px;
+            right : 0;
+            color : red;
+            display : none;
+        }
+        .username {
+            position: relative;
+            top: 50px;
+            z-index: 10;
+        }
+
+        .username-input-box {
+            position: relative;
+            width: 200px;
+            margin: 5px 0;
+            top: 50px;
+            z-index : 10;
+        }
+
+            .username-input-box i {
+                position: absolute;
+                top: 10px;
+                left: 6px;
+                font-size: 10px;
+            }
+
+
+            .username-input-box input {
+                width: 100%;
+                padding: 0 20px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                height: 30px;
+            }
+
+        .username-input-box input::placeholder {
+            font-size : 12px;
+        }
+
+        /* Password */
+        .input-password
+        {
+            position : relative;
+        }
+
+        .password-error {
+            position: absolute;
+            bottom: -25px;
+            right : 0;
+            font-size: 8px;
+            color: red;
+        }
+
+
+        .password {
+            position: relative;
+            top: 60px;
+        }
+        .password-input-box {
+            position: relative;
+            width: 200px;
+            margin: 5px 0;
+            top : 60px;
+        }
+
+            .password-input-box i {
+                position: absolute;
+                top: 10px;
+                left: 6px;
+                font-size: 10px;
+            }
+
+
+        .password-input-box input {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display : flex;
+            justify-content : center;
+            align-items : center;
+            font-size : 12px;
+            height : 30px;
+
+        }
+
+        .password-input-box input::placeholder {
+                    font-size: 12px;
+        }
+
+        /* Forgot Password */
+
+        .forgot 
+        {
+            text-align : end;
+            margin : 10px 40px;
+            position : relative;
+            top : 50px;
+        }
+
+        .forgot a
+        {
+            text-decoration : none;
+            color : black;
+            font-size : 12px;
+            font-weight : bold;
+        }
+
+        /* LOGIN */
+
+        .login
+        {
+            position : relative;
+            top : 50px;
+            display : flex;
+            justify-content : center;
+        }
+
+        .login a
+        {
+            text-decoration : none;
+            color : black;
+            padding : 10px;
+            border-radius : 20px;
+            font-size : 15px;
+            font-weight : bold;
+            background : lightblue;
+            width : 100px;
+            text-align : center;
+            color : white;
+        }
+
+        .sign-in-with
+        {
+            position : relative;
+            top : 80px;
+        }
+
+        .sign-in-with p
+        {
+            text-align : center;
+            font-weight : bold;
+        }
+
+        .sign-in-with-icons 
+        {
+            display : flex;
+            justify-content : center;
+            align-items : center;
+        }
+
+        .sign-in-with-icons a
+        {
+            padding : 10px;
+            color : black;
+        }
+
+        .sign-up
+        {
+            position : relative;
+            text-align : center;
+            top : 80px;
+        }
+
+        .sign-up a
+        {
+            text-decoration : none;
+            color : black;
+            font-weight : bold;
+        }
+        
+    </style>
+    <div class="container">
+        <div class="login-container">
+            <h1> LOGIN </h1>
+            <div class="input-container">
+                <div class="input-username">
+                    <form>
+                        <div class="username">
+                            <label for="username"> UserName </label>
+                        </div>
+
+                        <div class="username-error">
+                            <p> As Least 8 Charaters </p>
+                        </div>
+
+                        <div class="username-input-box">
+                            <i class="fa-solid fa-user"></i>
+                            <input placeholder="Type Your UserName" id="username" type="text" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="input-password">
+                    <form>
+                        <div class="password">
+                            <label for="password"> Password </label>
+                        </div>
+                        <div class="password-error">
+                            <p> As Least 8 Charaters , 1 number  ,  1 specail Charaters  </p>
+                        </div>
+
+                        <div class="password-input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input placeholder="Type Your Password" id="password" type="password" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="forgot">
+                <a href="##"> Forgot password? </a>
+            </div>
+
+            <div class="login">
+                <a href="##"> Login </a>
+            </div>
+
+            <div class="sign-in-with">
+                <p> Or sign in With </p>
+                <div class="sign-in-with-icons">
+                    <a href="##"> <i class="fa-brands fa-facebook"></i>  </a>
+                    <a href="##"> <i class="fa-brands fa-google"></i> </a>
+                    <a href="##"> <i class="fa-brands fa-twitter"></i> </a>
+                    <a href="##">  <i class="fa-brands fa-github"></i> </a>
+                </div>
+            </div>
+
+            <div class="sign-up">
+                <p> Don't have a account ? <a href="~/LoginSignIn/Signup"> Sign Up Here </a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const usernameinput = document.querySelector('#username');
+        const error_box = document.querySelector('.username-error');
+        const passwordinput = document.querySelector('#password');
+        const error_box_password = document.querySelector('.password-error');
+
+        usernameinput.addEventListener('input', () => {
+            if (usernameinput.value.length < 8) {
+                error_box.style.display = 'block';
+            }
+            else if (usernameinput.value.length >= 8) {
+                error_box.style.display = 'none';
+            }
+        })
+
+        passwordinput.addEventListener('input', () => {
+            const value =  passwordinput.value;
+            const hasNumber = /\d/.test(value);
+            const hasSpecialChar = /[!@@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/g.test(value);
+
+            if (value.length < 8 || !hasNumber || !hasSpecialChar) {
+                error_box_password.style.display = 'block';
+            } else {
+                error_box_password.style.display = 'none';
+            }
+        })
+    </script>
+</body>
+</html>

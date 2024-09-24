@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+
+    <title> TINH TIEN </title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+}
+
+<script>
+    function Caculate() {
+        var dg = parseFloat(document.getElementById('iPrice').value);
+        var sl = parseFloat(document.getElementById('iSoLuong').value);
+
+
+
+
+        if (dg < 0) {
+            document.getElementById(ErrorPrice).innerHTML = "cc";
+        }
+
+     
+
+        if (sl < 0) {
+            document.getElementById(ErrorNum).innerHTML = "cc";
+        }
+
+        else
+        {
+            document.getElementById('Total').value = dg * sl;
+        }
+    }
+</script>
+
+
+<body>
+
+    <style>
+        form
+        {
+            height : 100vh;
+            display : flex;
+            flex-direction : column;
+            justify-content : center;
+            align-items : center;
+        }
+    </style>
+    <form name="ShoppingCart" method="post">
+        Đơn giá <input type="number" id="iPrice" name="Price" onchange="Caculate();" />
+        <span id="ErrorPrice">  </span>
+        Số lượng <input type="number" id="iSoLuong" name="Soluong" min="1" max="50" onchange="Caculate();" />
+        <span onclick ="Caculate();" id="ErrorNum">  </span>
+        Thành tiền <input type="text" id="Total" readonly />
+
+    </form>
+</body>

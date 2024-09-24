@@ -1,0 +1,535 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://kit.fontawesome.com/131e0ec2d1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .body {
+            position: relative;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+        }
+
+
+
+        /* -------------------- HEADER --------------------- */
+
+
+        header {
+            position: relative;
+        }
+
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+        }
+
+        /* -------------------- HEADER RIGHT BOX ---------------- */
+
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .header-right a {
+                text-decoration: none;
+                color: black;
+            }
+
+        .header-right-tieude {
+            margin-bottom: 10px;
+        }
+
+
+        /*
+            ------------------------- ICON BOX ------------------------
+        */
+
+
+        .header-right-tieude-icon {
+            display: flex;
+            position: relative;
+        }
+
+
+        /*
+            ---------------------------- ICON 1 ---------------------------
+        */
+
+        .header-right-tieude-icon-box1 .icon-1 i {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .header-right-tieude-icon-box1 p {
+            margin-left: 30px;
+        }
+
+
+        /*
+            --------------------------------- ICON 2 ----------------------
+        */
+
+        .header-right-tieude-icon-box2 .icon-2 i {
+            position: absolute;
+            bottom: 0px;
+            left: 135px;
+        }
+
+
+        .header-right-tieude-icon-box2 p {
+            margin-left: 40px;
+        }
+
+        /*
+            ----------------------------------- ICON 3  --------------------------------
+        */
+        .header-right-tieude-icon-box3 {
+            position: relative;
+        }
+
+            .header-right-tieude-icon-box3 i {
+                position: relative;
+                display: none;
+            }
+
+        /*
+            --------------------------- SIGN IN BOX -----------------------------
+        */
+
+        .sign-in {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+            .sign-in a {
+                font-size: 20px;
+            }
+
+        /*
+             ----------------------------- NAVBAR  ------------------------------------
+
+        */
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100%;
+            background: white;
+            z-index: 1000;
+            position: sticky;
+            top: 0;
+            box-shadow: 0px 2px 5px black;
+        }
+
+            nav ul li {
+                display: inline-block;
+                list-style: none;
+                padding: 15px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    font-weight: 500;
+                    font-style: normal;
+                }
+
+                    nav ul li a::after {
+                        position: absolute;
+                        content: "";
+                        background: black;
+                        left: 0px;
+                        width: 0;
+                        bottom: -2px;
+                        height: 1px;
+                        transition: width 0.3s ease-in;
+                    }
+
+                    nav ul li a:hover::after {
+                        width: 100%
+                    }
+
+        /* -------------------------- FOTTER --------------------------- */
+
+        .container footer {
+            display: flex;
+            justify-content: space-around;
+            height: 300px;
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgb(242, 242, 242);
+        }
+
+            .container footer ul li {
+                list-style: none;
+            }
+
+            .container footer ul li {
+                font-size: 15px;
+                padding: 2px 0;
+            }
+
+                .container footer ul li a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 15px;
+                }
+
+        .footer-he-thong-cua-hang, .footer-ve-chung-toi, .footer-ho-tro {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-ho-tro-title, .footer-ve-chung-toi-title, .footer-he-thong-cua-hang-title {
+            padding: 10px 0;
+        }
+
+        .footer-ho-tro h4 {
+            text-align: center;
+        }
+
+        .footer-ho-tro-title {
+        }
+
+        .footer-ve-chung-toi {
+            text-align: center;
+        }
+
+        .footer-ve-chung-toi-title {
+            text-align: center;
+            font-size: 20px;
+        }
+
+            .footer-ve-chung-toi-title h4, .footer-ve-chung-toi-title h5 {
+                margin: 5px 0;
+            }
+
+            .footer-ve-chung-toi-title span {
+                font-weight: normal;
+            }
+
+
+        .footer-he-thong-cua-hang h4 {
+            text-align: center;
+        }
+
+        .footer-he-thong-cua-hang-title {
+            text-align: center;
+            padding: 0 -20px;
+        }
+        /* ----------------------------------------- MEDIA SREEN IPAD LAPTOP -------------------------------
+        */
+        @@media only screen and (min-width : 721px ) and (max-width : 1200px) {
+            .header-right-tieude {
+                font-size: 9px;
+            }
+
+
+            .header-right-tieude-icon-box1 p, .header-right-tieude-icon-box2 p {
+                display: none;
+            }
+
+            .header-right-tieude-icon-box1 .icon-1 i {
+                bottom: -10px;
+            }
+
+            .header-right-tieude-icon-box2 .icon-2 i {
+                bottom: -10px;
+                left: 30px;
+            }
+
+            .header-right-tieude-icon-box3 i {
+                display: block;
+                bottom: -10px;
+                left: 60px;
+            }
+
+            .sign-in {
+                right: 0;
+                bottom: -12px;
+            }
+
+                .sign-in a {
+                    font-size: 15px;
+                }
+
+            nav {
+                display: none;
+            }
+        }
+
+        /* ---------------------------- MEDIA SREEN PHONE ----------------------------------
+        */
+
+        @@media only screen and (min-width : 300px) and (max-width : 720px) {
+            .header-right-tieude {
+                font-size: 7px;
+            }
+
+            .header-right-tieude-icon-box1 p, .header-right-tieude-icon-box2 p {
+                display: none;
+            }
+
+            .header-right-tieude-icon-box1 .icon-1 i {
+                font-size: 10px;
+            }
+
+            .header-right-tieude-icon-box2 .icon-2 i {
+                font-size: 10px;
+                left: 20px;
+            }
+
+            .header-right-tieude-icon-box3 i {
+                font-size: 10px;
+                display: block;
+                left: 40px;
+            }
+
+
+            .sign-in {
+                right: 0;
+                font-size: 8.9px;
+            }
+
+                .sign-in a {
+                    font-size: 10px;
+                }
+
+
+            .nav-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            nav {
+                width: 100%;
+                background-color: lightblue;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                top: 57px;
+                position: absolute;
+                height: 450px;
+                overflow: hidden;
+                transition: height 0.4s ease;
+            }
+
+            .open {
+                height: 0;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+
+                nav ul li a {
+                    font-size: 15px;
+                    color: white;
+                }
+        }
+    </style>
+
+    <div class="container">
+        <header>
+            <div class="header">
+                <a href="##">
+                    aLogo
+                </a>
+
+                <div class="header-right">
+                    <div class="header-right-tieude">
+                        <h1> FREE SHIPPING ON ALL ORDERS </h1>
+                    </div>
+
+                    <div class="header-right-tieude-icon">
+                        <div class="header-right-tieude-icon-box1">
+                            <div class="icon-1">
+                                <a href="##">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </div>
+                            <p>
+                                <a href="##"> Shopping Cart </a>
+                            </p>
+                        </div>
+
+                        <div class="header-right-tieude-icon-box2">
+                            <div class="icon-2">
+                                <a href="##">
+                                    <i class="fa-solid fa-heart"></i>
+                                </a>
+                            </div>
+                            <p>
+                                <a href="##"> My WishList </a>
+                            </p>
+                        </div>
+
+                        <div class="header-right-tieude-icon-box3">
+                            <div id="menu-icon" class="icon-3">
+                                <a href="##">
+                                    <i class="fa-solid fa-bars">
+                                    </i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="sign-in">
+                            <a style="font-weight : bold" href="~/LoginSignIn/Login">
+                                Sign in
+                            </a>
+
+                            <label> or </label>
+
+
+                            <a style="font-weight : bold" href="~/LoginSignIn/Signup">
+                                Create An Account
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- ************* NAVBAR **************** -->
+
+        <nav class="open">
+            <ul>
+                <li> <a href="~/Home/TrangChu"> HOME </a></li>
+                <li> <a href="~/Collection/CollectionEvething"> COLLECTION </a></li>
+                <li> <a href="##"> SHOP  </a></li>
+                <li> <a href="##"> BLOG </a></li>
+                <li> <a href="##"> ABOUT US </a></li>
+                <li> <a href="##"> CONTACT US </a></li>
+                <li> <a href="##"> SEARCH </a></li>
+            </ul>
+        </nav>
+
+        <div>
+            @RenderBody()
+        </div>
+
+
+        <!-- ******************* FOOTER CLASS ******************************* -->
+
+        <footer class="bg-black">
+            <div class="footer-ho-tro">
+                <h4> HỖ TRỢ KHÁCH HÀNG </h4>
+                <div class="footer-ho-tro-title">
+                    <ul class="">
+                        <li>
+                            <a href="##"> Hướng dẫn mua hàng </a>
+                        </li>
+
+                        <li>
+                            <a href="##"> Hướng dẫn chọn size </a>
+                        </li>
+
+                        <li>
+                            <a href="##"> Phương thức thanh toán </a>
+                        </li>
+
+                        <li>
+                            <a href="##"> Chính sách vận chuyển </a>
+                        </li>
+
+                        <li>
+                            <a href="##"> Chính sách bảo mật </a>
+                        </li>
+
+                        <li>
+                            <a href="##"> Quy định đổi trả </a>
+                        </li>
+
+                        <li>
+                            <a href="##"> Chính sách xử lý khiếu nại </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-ve-chung-toi">
+                <h4> VỀ CHÚNG TÔI </h4>
+                <div class="footer-ve-chung-toi-title">
+                    <h4> HỘ KINH DOANH ATINO </h4>
+                    <h5> Địa Chỉ : <span> Số 110 Phố Nhổn , Phường Tây Tựu , Quận Bắc LIêm , Tp.Hà Nội </span> </h5>
+                    <h5> Mã Số Doanh Nghiệp : <span> 01D-8004624 </span></h5>
+                    <h5> Email : <span> atino@atino.vn </span></h5>
+                </div>
+            </div>
+
+            <div class="footer-he-thong-cua-hang">
+                <h4> HỆ THỐNG CỬA HÀNG </h4>
+                <div class="footer-he-thong-cua-hang-title">
+                    <h5> Hà Nội </h5>
+                    <ul>
+                        <li>
+                            - 110 Phố Nhổn
+                        </li>
+
+
+                        <li> - 1221 Giải Phóng </li>
+
+                        <li> - 154 Quang Trung - Hà Đông </li>
+
+                        <li> - 208 Bạch Mai </li>
+
+                        <li> - 49 Chùa Bộc </li>
+
+                        <li> - 131 Cầu Giấy </li>
+
+                        <li> - 290 Nguyễn Trãi - Trung Văn </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Lấy các phần tử cần thiết
+        const menu_icon = document.querySelector('#menu-icon');
+        const icon_icon = document.querySelector('#menu-icon i');
+        const dropdown_nav = document.querySelector('nav');
+        menu_icon.onclick = function () {
+            dropdown_nav.classList.toggle('open');
+            const isOPEN = dropdown_nav.classList.contains('open');
+
+            icon_icon.classList = isOPEN
+                ? 'fa-solid fa-bars'
+                : 'fa-solid fa-xmark'
+        }
+
+    </script>
+</body>
+</html>

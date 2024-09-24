@@ -1,0 +1,86 @@
+﻿@{
+    Layout = null;
+}
+
+<script>
+    function getvalue(id) {
+        return document.getElementById(id).value.trim();
+    }
+
+    function ShowError(key, mess) {
+        document.getElementById(key + '_error').innerHTML = mess;
+    }
+
+    function validate()
+    {
+        var flag = true;
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        var repassword = document.getElementById('repassword');
+
+        if (username.value.length < 8) {
+            flag = false;
+            ShowError('username', 'Vui lòng kiểm tra lại');
+        }
+
+        if (password.value == '' || password.value.length < 8) {
+            flag = false;
+            ShowError('password', 'Vui lòng kiểm tra lại');
+        }
+
+        if (repassword.value != password.value) {
+            flag = false;
+            ShowError('repassword' , 'Lỗi');
+        }
+        
+        return flag;
+    }
+    
+</script>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <table border="1" cellpadding="10">
+            <tr> <th colspan="2" align="center"> <h4> Đăng Kí </h4> </th></tr>
+            <tr>
+                <td> Tên Đăng nhập : </td>
+                <td>
+                    <input type="text" id="username" name="username" value="" />
+                    <span id="username_error"> </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Mật Khẩu : </td>
+                <td>
+                    <input type="text" id="password" name="password" value="" />
+                    <span id="password_error"> </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> Nhập lại Mật Khẩu : </td>
+                <td>
+                    <input type="text" id="repassword" name="repassword" value="" />
+                    <span id="repassword_error"> </span>
+                </td>
+            </tr>
+
+            <tr>
+                <td> </td>
+
+                <td>
+                    <input type="submit" onclick="return validate()" id="btn" name="btn" value="Đăng Kí">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<style>
+    main
+    {
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        height : 50vh;
+    }
+
+    main section form 
+    {
+        width : 100%;
+        position : relative;
+    }
+
+    main section form i
+    {
+        position : absolute;
+        right : 10px;
+        top : 7px;
+    }
+
+    main section form input
+    {
+        width : 300px;
+        padding : 0 5px;
+        height : 30px;
+    }
+</style>
+<main>
+    <section>
+        <form>
+            <label> </label>
+            <a href="##">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <input type="text" placeholder="Search SomeThing "/>
+        </form>
+    </section>
+</main>
+
+

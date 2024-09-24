@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "~/Views/Shared/_CollectionLayout.cshtml";
+}
+
+<style>
+    main h1 {
+        text-align: center;
+        margin: 100px 0;
+    }
+
+    .box-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .shoes-collection-box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr) );
+        justify-content: center;
+        gap: 60px;
+        margin: 0 100px 50px 100px;
+    }
+
+    .shoes-collection-boxes img {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .shoes-collection-boxes p {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .shoes-collection-boxes h4 {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .shoes-collection-boxes {
+        transition: scale 0.3s ease;
+    }
+
+        .shoes-collection-boxes:hover {
+            scale: 1.05;
+        }
+</style>
+
+
+<main>
+    <h1> On Sale </h1>
+
+
+    <!-- ---------------------------- SAP XEP THEO MOT CHINHR SAU --------------------------------- -->
+
+    <div class="box-container">
+        <section class="shoes-collection-box">
+            <div class="shoes-collection-boxes box-1">
+                <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20231107_utwMfz9jLc.jpeg" />
+                <p> Giày Thể Thao 9810 </p>
+                <h4> 299,000 <sup> đ </sup> </h4>
+            </div>
+
+            <div class="shoes-collection-boxes box-2">
+                <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20240607_Dn07duTHgw.jpeg" />
+                <p>
+                    Áo Sơ MI Cộc Regular L.3.4945
+                </p>
+                <h4> 69,000 <sup> đ </sup> </h4>
+            </div>
+
+            <div class="shoes-collection-boxes box-3">
+                <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20240917_Qcd3fw06uC.jpeg" />
+                <p>
+                    Áo Nỉ Giữ Nhiệt Slim L.2.7891
+                </p>
+                <h4> 159,000 <sup> đ </sup> </h4>
+            </div>
+
+            <div class="shoes-collection-boxes box-4">
+                <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20240824_6LdyA2Hblu.jpeg" />
+                <p>
+                    Quần Âu Slim 31.4.QA074
+                </p>
+                <h4> 339,000 <sup> đ </sup> </h4>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // boxes img link
+        const imglink = document.querySelector('.shoes-collection-boxes');
+        imglink.onclick = fucion()
+        {
+            window.location.href = '';
+        }
+    </script>
+</main>

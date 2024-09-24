@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <style>
+        .collection-items
+        {
+            display : flex;
+            justify-content : center;
+            align-items : center;
+            width : 100%;
+        }
+
+        .collection-items img
+        {
+            width : 200px;
+            object-fit : contain;
+            border-radius : 30%;
+            transition : scale 0.5s ease;
+        }
+
+        .collection-items img:hover
+        {
+            scale : 1.05;
+        }
+
+        .collection-items p
+        {
+            margin-top : 20px;
+            text-align : center;
+            font-size : 22px;
+            font-weight : bold;
+   
+        }
+
+        .jacket-collection  , .items-collection , .shirt-collection
+        {
+            margin : 50px;
+          
+        }
+
+        /* SREEN IPAD && LAPTOP */
+
+        @@media only screen and (min-width : 721px ) and (max-width : 890px) {
+            .collection-items {
+
+            }
+        }
+
+        /* SREEN Phone */
+
+        @@media only screen and (min-width : 300px) and (max-width : 720px) {
+            .collection-items
+            {
+                
+            }
+
+            .collection-items img
+            {
+                width : 100px;
+            }
+
+            .collection-items p {
+                    margin-top: 20px;
+                    text-align: center;
+                    font-size: 9px;
+                    font-weight: bold;
+            }
+
+            .jacket-collection, .items-collection, .shirt-collection {
+                margin : 50px 8px;
+            }
+
+
+        }
+        
+        
+    </style>
+    <main>
+        <section class="collection-items">
+            <div class="jacket-collection">
+                <a href="~/Collection/JacketCollection">
+                    <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20240917_U0eFyYRrey.jpeg"/>
+                </a>
+
+                <p> Jacket Collection </p>
+            </div>
+
+            <div class="items-collection">
+                <a href="~/Collection/ShoesCollection">
+                    <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20231107_utwMfz9jLc.jpeg" />
+                </a>
+
+                <p>
+                    Shoes Collection
+                </p>
+            </div>
+
+            <div class="shirt-collection">
+                <a href="~/Collection/ShirtCollection">
+                    <img src="https://pos.nvncdn.com/f4d87e-8901/ps/20240607_3AAUIxRjTN.jpeg"/>
+                </a>
+
+                <p>
+                    Shirt Collection
+                </p>
+            </div>
+        </section>
+
+    </main>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

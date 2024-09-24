@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+
+    <title> WelCome Page : Sử dụng 1 form nhập tên , hiển thị lời chào</title>
+
+    <script src="~/Scripts/myJs/UserJs.js">
+
+    </script>
+}
+<head>
+    
+</head>
+
+
+
+
+
+<body>
+    <style>
+        form {
+            min-height: 80vh;
+        }
+    </style>
+
+    <form name="welcome">
+        <input type="text" id="iName" value="test"
+               maxlength="50" max="30" /> <br />
+
+        <input type="button" id="btnwelcome" value="welcome" onclick="HomNay()" />
+    </form>
+</body>
+

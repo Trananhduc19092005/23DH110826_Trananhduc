@@ -1,0 +1,304 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+<style>
+    main
+    {
+        
+    }
+    .banner {
+        background-image: url(https://img.freepik.com/premium-vector/new-collection-banner_190089-8.jpg?w=1380);
+        height: 80vh;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .body-baner-title {
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        margin: 0 70px;
+        color: white;
+        border-radius: 20px;
+    }
+    .body-baner-title h1
+    {
+        padding : 10px 0;
+        text-align : center;
+    }
+
+    .body-baner-title hr {
+        width : 115%;
+        margin: 10px 0;
+    }
+    
+
+        .body-baner-title p {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+    .body-baner-button {
+        display : flex;
+        align-items : center;
+        justify-content : center;
+        background-color: #000000;
+        width : 200px;
+        height : 100px;
+    }
+
+    .body-baner-button a
+    {
+        color : white;
+        text-decoration : none;
+    }
+
+    .collection
+    {
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        height : 100px;
+
+    }
+
+    .collection h1 {
+        box-shadow: 0px 2px 5px black;
+        width: 200px;
+        text-align: center;
+        padding : 10px;
+    }
+
+
+    .link-banner {
+        margin : 30px 30px;
+        height : 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items : center;
+    }
+
+    hr
+    {
+        margin : 20px 0;
+    }
+    
+
+    .Jacket-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(https://pos.nvncdn.com/f4d87e-8901/ps/20240917_yyfOEX7y0P.jpeg);
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 20%;
+        background-size: cover;
+        color: white;
+        flex: 1;
+        background-position: center center;
+        scale: 1;
+        transition: scale 0.3s ease;
+    }
+
+    .Jacket-banner:hover
+    {
+        scale : 1.02;
+    }
+
+        .Jacket-banner h3 {
+            padding: 2px;
+            width: 50%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+        }
+
+        .Jacket-banner span
+        {
+            text-align : center;
+        }
+
+    .shoes-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(https://hanoi26sneaker.com/wp-content/uploads/2023/03/Giay-Nike-Air-Force-1-Custom-Low-Cartoon-Black-White-1.jpg);
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 20%;
+        background-size: cover;
+        color: white;
+        flex: 1;
+        margin: 0 10px;
+        background-position: center center;
+        scale: 1;
+        transition: scale 0.3s ease;
+    }
+
+    .shoes-banner:hover {
+            scale: 1.02;
+    }
+
+    .shoes-banner h3 {
+        padding: 2px;
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+    }
+
+    .shirt-banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(https://mcdn.coolmate.me/image/November2022/mau-ao-phong-nam-dep_277.jpg);
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 20%;
+        background-size: cover;
+        color: white;
+        flex: 1;
+        background-position: center center;
+        scale: 1;
+        transition: scale 0.3s ease;
+    }
+
+    .shirt-banner:hover {
+        scale: 1.02;
+    }
+
+    .shirt-banner h3 {
+        padding: 2px;
+        width: 50%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+    }
+
+
+    /* MEDIA SCREEN */
+    @@media only screen and (max-width : 450px) {
+        .banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .body-baner-title {
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+        }
+
+        .body-baner-title h1 {
+            font-size: 15px;
+        }
+
+        .body-baner-title p {
+            font-size: 12px;
+        }
+
+        .body-baner-title > .body-baner-button {
+            font-size: 12px;
+            width: 150px;
+            height: 60px;
+        }
+
+        .Jacket-banner h3 {
+            font-size : 7px;
+        }
+
+        .Jacket-banner span {
+            text-align: center;
+        }
+
+        .shoes-banner h3 {
+            font-size: 7px;
+        }
+
+        .shirt-banner h3 {
+            font-size: 7px;
+        }
+    }
+
+
+
+    
+</style>
+
+<main>
+    <section class="banner bg-black">
+        <div class="body-baner-title">
+            
+        </div>  
+    </section>
+
+    <hr />
+    <section class="collection">
+         <h1> OUR COLLECTION </h1>
+    </section>
+
+
+    <section class="link-banner">
+            <div class="Jacket-banner">
+                <h3> JACKET </h3>
+            </div>
+       
+
+        <div class="shoes-banner">
+            <h3> SHOES </h3>
+        </div>
+
+        <div class="shirt-banner">
+            <h3> SHIRT </h3>
+        </div>
+    </section>
+
+
+</main>
+
+<script>
+    const link_banner = document.querySelector('.Jacket-banner');
+    const shoes_banner = document.querySelector('.shoes-banner');
+    const accessories_banner = document.querySelector('.shirt-banner');
+
+
+    // them link o day link editor link
+    link_banner.onclick = function () {
+        window.location.href = '/Collection/JacketCollection';
+    }
+
+
+        // them link o day shoes link
+    shoes_banner.onclick = function () {
+        window.location.href = '/Collection/ShoesCollection';
+    }
+
+
+        // them link o day shirt-banner
+    accessories_banner.onclick = function () {
+        window.location.href = '/Collection/ShirtCollection';
+    }
+</script>
+
+
+

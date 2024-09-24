@@ -1,0 +1,324 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Signup</title>
+    <script src="https://kit.fontawesome.com/131e0ec2d1.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+        }
+
+        .sign-up-container {
+            background: white;
+            width: 280px;
+            height: 420px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px 0px black;
+        }
+
+        .sign-up-container h1 {
+            text-align: center;
+            position: relative;
+            top: 15px;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ----------------------------------- User Name ------------------------------------------------- */
+
+
+        .username {
+            position: relative;
+            top: 20px;
+        }
+
+        .username-input-box {
+            position: relative;
+            width: 200px;
+            margin: 5px 0;
+            top: 20px;
+        }
+
+        .username-input-box i {
+            position: absolute;
+            top: 11px;
+            left: 6px;
+            font-size: 10px;
+        }
+
+
+        .username-input-box input {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            height: 30px;
+        }
+
+       .username-input-box input::placeholder {
+            font-size: 12px;
+       }
+
+        /* -------------------------- Password ------------------------------ */
+
+
+        .password {
+            position: relative;
+            top: 20px;
+        }
+
+        .password-input-box {
+            position: relative;
+            width: 200px;
+            margin: 5px 0;
+            top: 20px;
+        }
+
+        .password-input-box i {
+            position: absolute;
+            top: 11px;
+            left: 6px;
+            font-size: 10px;
+        }
+
+
+        .password-input-box input {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            height: 30px;
+        }
+
+        .password-input-box input::placeholder {
+            font-size: 12px;
+        }
+
+            /* ------------------------- EMAIL -------------------------- */
+
+        .email {
+            position: relative;
+            top: 20px;
+        }
+
+        .Email-input-box {
+            position: relative;
+            width: 200px;
+            margin: 5px 0;
+            top: 20px;
+        }
+
+        .Email-input-box i {
+            position: absolute;
+            top: 11px;
+            left: 6px;
+            font-size: 10px;
+        }
+
+        .Email-input-box input {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            height: 30px;
+        }
+
+        .Email-input-box input::placeholder {
+            font-size: 12px;
+        }
+
+        /* -------------------------- SIGN UP -------------------------------- */
+
+        .sign-up {
+            position: relative;
+            top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sign-up a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            background: lightblue;
+            width: 100px;
+            text-align: center;
+            color: white;
+        }
+
+        .sign-up-with {
+            position: relative;
+            top: 40px;
+        }
+
+        .sign-up-with p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .sign-up-with-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sign-up-with-icons a {
+                padding: 10px;
+                color: black;
+        }
+
+
+
+    </style>
+    <div class="container">
+        <div class="sign-up-container">
+            <h1> SIGN UP </h1>
+
+            <!---------------- USERNAME INPUT ------------------>
+
+            <div class="input-container">
+
+                <!-- USERNAME INPUT -->
+
+                <div class="input-username">
+                    <form>
+                        <div class="username">
+                            <label for="username"> UserName </label>
+                        </div>
+                        <div class="username-input-box">
+                            <i class="fa-solid fa-user"></i>
+                            <input placeholder="Type Your UserName" id="username" type="text" />
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <!----------------------- EMAIL INPUT ------------------->
+
+
+
+                <div class="input-email">
+                    <!-- EMAIL INPUT -->
+                    <form>
+                        <div class="email">
+                            <label for="email"> Email </label>
+                        </div>
+                        <div class="Email-input-box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input placeholder="Type Your Email" id="email" type="email" />
+                        </div>
+                    </form>
+                </div>
+
+
+                <!--------------------------- PASSWORD INPUT -------------------------->
+                <div class="input-password">
+                    <form>
+                        <!-- PASSWORD INPUT -->
+                        <div class="password">
+                            <label for="password"> Password </label>
+                        </div>
+                        <div class="password-input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input placeholder="Type Your Password" id="password" type="password" />
+                        </div>
+                    </form>
+                </div>
+
+                <!--------------------------- PASSWORD INPUT CONFRIM -------------------------->
+
+
+                <div class="input-password-again">
+                    <form>
+                        <div class="password">
+                            <label for="password-again"> Confirm Your Password </label>
+                        </div>
+                        <div class="password-input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input placeholder="Type Your Password" id="password-again" type="password" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--------------------------- SIGN IN AND SIGN UP WITH -------------------------->
+
+            <div class="sign-up-or-sign-up-with">
+
+                <!--------------------------- SIGN IN -------------------------->
+
+                <div class="sign-up">
+                    <a href="##"> Sign Up </a>
+                </div>
+
+                <!--------------------------- SIGN UP WITH -------------------------->
+
+                <div class="sign-up-with">
+                    <p> Or Sign Up With </p>
+                    <div class="sign-up-with-icons">
+                        <a href="##"> <i class="fa-brands fa-facebook"></i>  </a>
+                        <a href="##"> <i class="fa-brands fa-google"></i> </a>
+                        <a href="##"> <i class="fa-brands fa-twitter"></i> </a>
+                        <a href="##">  <i class="fa-brands fa-github"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let a = "";
+        const student = [
+            "John", 
+            "Peter"
+        ]
+
+        student.forEach(myFuncion);
+
+        function myFuncion(items) {
+            a += items + " ";
+            console.log(a);
+        }
+
+
+        myFuncion();
+    </script>
+</body>
+</html>
